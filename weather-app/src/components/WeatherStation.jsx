@@ -1,9 +1,19 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
+import WebFont from "webfontloader";
 
-class WeatherStation extends Component {
-  render() {
-    return <div className="weather-station">weather station</div>;
-  }
+function WeatherStation(props) {
+  useEffect(() => {
+    WebFont.load({
+      google: {
+        families: ["Pattaya"],
+      },
+    });
+  }, []);
+  return (
+    <div className="weather-station">
+      <div className="font-loader-two">Your local weather</div>
+    </div>
+  );
 }
 
 export default WeatherStation;

@@ -1,5 +1,5 @@
 .App {
-  border: 3px red solid;
+  /* border: 3px red solid; */
   height: 1000px;
   background-color: lightcoral;
 }
@@ -11,15 +11,15 @@
 /* Header Begins */
 
 .header {
-  border: 3px greenyellow solid;
+  /* border: 3px greenyellow solid; */
   height: 90px;
-  background-color: lime;
+  background-color: rgb(168, 168, 168);
   text-align: center;
 }
 
 .logo {
   position: absolute;
-  border: 3px orange solid;
+  /* border: 3px orange solid; */
   background-color: orange;
   height: 90%;
   left: 20px;
@@ -39,9 +39,16 @@
 }
 
 .search-bar {
-  border: 3px black solid;
+  /* border: 3px black solid; */
   position: absolute;
   right: 20px;
+  top: 30px;
+}
+
+.font-loader {
+  font-family: "Pattaya";
+  font-size: 4rem;
+  color: lightblue;
 }
 
 /* Header Ends */
@@ -68,6 +75,15 @@
 }
 
 /* Home Screen Ends */
+
+/* Weather station starts */
+.font-loader-two {
+  font-family: "Pattaya";
+  font-size: 2rem;
+  color: lightblue;
+}
+
+/* Weather station ends */
 
 /* .App {
   text-align: center;
