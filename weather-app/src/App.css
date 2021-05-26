@@ -12,14 +12,14 @@
 
 .header {
   /* border: 3px greenyellow solid; */
-  height: 90px;
+  height: 100px;
   background-color: rgb(168, 168, 168);
   text-align: center;
 }
 
 .logo {
   position: absolute;
-  /* border: 3px orange solid; */
+  border: 3px lightgray solid;
   background-color: orange;
   height: 90%;
   left: 20px;
@@ -51,6 +51,10 @@
   color: lightblue;
 }
 
+.text-box {
+  border-radius: 10px;
+}
+
 /* Header Ends */
 
 /* Home Screen Begins */
@@ -72,6 +76,19 @@
   background-color: grey;
   top: 10%;
   left: 40%;
+  border: 3px lightgray solid;
+}
+
+.station {
+  position: absolute;
+  border: 3px grey solid;
+  width: 90%;
+  height: 88%;
+  border-radius: 15px;
+  background-color: white;
+  top: 8%;
+  left: 4%;
+  border: 3px lightgray solid;
 }
 
 /* Home Screen Ends */
