@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import WebFont from "webfontloader";
 import * as api from "../api";
 import IconFunction from "../functions/IconFunction";
+import ImageFuction from "../functions/ImageFuction";
 import weatherDescription from "../functions/tempFunction";
 
 function WeatherStation(props) {
@@ -50,6 +51,7 @@ function WeatherStation(props) {
     <div className="weather-station">
       <div className="font-loader-two">Your local weather</div>
       <div className="station">
+        {ImageFuction(description)}
         <div className="weather-icon">{IconFunction(description)}</div>
         <div className="primary-weather">
           <div classNam="temp">

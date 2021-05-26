@@ -118,6 +118,11 @@
   height: 100px;
 }
 
+.rian-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 /* Home Screen Ends */
 
 /* Weather station starts */
