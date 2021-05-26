@@ -89,6 +89,9 @@
   top: 8%;
   left: 4%;
   border: 3px lightgray solid;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
 }
 
 .primary-weather {
@@ -113,16 +116,52 @@
   left: 35%;
 }
 
-.rain {
+.icon {
   width: 100px;
   height: 100px;
+  color: whitesmoke;
 }
 
-.rian-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+.temp {
+  color: white;
 }
+
+.wind {
+  color: whitesmoke;
+}
+
+.description {
+  color: whitesmoke;
+}
+
+.forecast {
+  color: white;
+}
+
+/* Side Bar start   */
+
+.sideBar {
+  border: 3px red solid;
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  flex: 1;
+}
+
+/* Side Bar end   */
+
+/* .rian-img {
+  height: 50%;
+  width: 50%;
+  object-fit: cover;
+} */
 /* Home Screen Ends */
 
 /* Weather station starts */

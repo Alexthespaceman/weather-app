@@ -46,6 +46,9 @@ function WeatherStation(props) {
   }, []);
 
   const temperature = parseInt(temp.slice(1));
+  var tomorrow = new Date();
+  const hello = new Date(tomorrow);
+  console.log(hello);
 
   return (
     <div className="weather-station">
@@ -54,24 +57,24 @@ function WeatherStation(props) {
         {ImageFuction(description)}
         <div className="weather-icon">{IconFunction(description)}</div>
         <div className="primary-weather">
-          <div classNam="temp">
+          <div className="temp">
             {weatherDescription(temperature, temp.slice(1, 6))}
           </div>
-          <div classNam="wind">Wind Speed is {wind} </div>
-          <div classNam="description"> with {description}</div>
+          <div className="wind">Wind Speed is {wind} </div>
+          <div className="description"> with {description}</div>
         </div>
 
         <div className="three-day-forecast">
-          <div classNam="forecast">
-            {day1} {day1temp}
+          <div className="forecast">
+            Tomorrow's forecast {day1temp}
             {day1wind}
           </div>
-          <div classNam="forecast">
+          <div className="forecast">
             {day2}
             {day2temp}
             {day2wind}
           </div>
-          <div classNam="forecast">
+          <div className="forecast">
             {day3}
             {day3temp}
             {day3wind}

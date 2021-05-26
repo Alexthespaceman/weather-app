@@ -6,19 +6,19 @@ import { FiCloudRain, FiCloudSnow } from "react-icons/fi";
 
 function IconFunction(description) {
   if (description.includes("sun")) {
-    return <CgSun className="" />;
+    return <CgSun className="icon" />;
   }
   if (description.includes("rain")) {
-    return <FiCloudRain className="rain" />;
+    return <FiCloudRain className="icon" />;
   }
   if (description.includes("snow")) {
-    return <FiCloudSnow />;
+    return <FiCloudSnow className="icon" />;
   }
   if (description.includes("cloud")) {
-    return <BiCloud />;
+    return <BiCloud className="icon" />;
   }
   if (description.includes("wind")) {
-    return <FaWind />;
+    return <FaWind className="icon" />;
   }
 }
 

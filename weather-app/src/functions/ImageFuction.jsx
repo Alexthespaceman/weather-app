@@ -7,19 +7,19 @@ import snow from "../images/snow.jpeg";
 
 function ImageFuction(description) {
   if (description.includes("sun")) {
-    return <img src={sun} className="sun-img" />;
+    return <img alt="sun" src={sun} className="sun-img" />;
   }
   if (description.includes("rain")) {
-    return <img src={rain} className="rain-img" />;
+    return <img alt="rain" src={rain} className="rain-img" />;
   }
   if (description.includes("snow")) {
-    return <img src={snow} className="snow-img" />;
+    return <img alt="snow" src={snow} className="snow-img" />;
   }
   if (description.includes("cloud")) {
-    return <img src={cloudy} className="cloud-img" />;
+    return <img alt="cloud" src={cloudy} className="cloud-img" />;
   }
   if (description.includes("wind")) {
-    return <img src={lightning} className="wind-img" />;
+    return <img alt="lighting" src={lightning} className="wind-img" />;
   }
 }
 

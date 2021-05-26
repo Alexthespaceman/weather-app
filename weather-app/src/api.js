@@ -7,3 +7,11 @@ export const getManchesterWeather = () => {
       return data;
     });
 };
+
+export const getCityData = () => {
+  return axios
+    .get("https://goweather.herokuapp.com/weather/london")
+    .then(({ data }) => {
+      return data;
+    });
+};
