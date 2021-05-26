@@ -1,13 +1,16 @@
+import { Router } from "@reach/router";
 import React, { Component } from "react";
+import HomeScreen from "../Screens/HomeScreen";
 import Header from "./Header";
-import HomeScreen from "./HomeScreen";
 
 class Home extends Component {
   render() {
     return (
-      <div>
+      <div className="home">
         <Header />
-        <HomeScreen />
+        <Router>
+          <HomeScreen path="/" />
+        </Router>
       </div>
     );
   }

@@ -1,20 +1,73 @@
 .App {
   border: 3px red solid;
-  height: 100%;
+  height: 1000px;
+  background-color: lightcoral;
 }
+
+.home {
+  height: 900px;
+}
+
+/* Header Begins */
 
 .header {
   border: 3px greenyellow solid;
-  height: 20%;
-}
-
-.home-screen {
-  border: 3px lightblue solid;
+  height: 90px;
+  background-color: lime;
+  text-align: center;
 }
 
 .logo {
+  position: absolute;
   border: 3px orange solid;
+  background-color: orange;
+  height: 90%;
+  left: 20px;
+  top: 0px;
+  width: 80px;
+  height: 80px;
+  background-color: lightblue;
+  border-radius: 15px;
+  margin: 5px;
 }
+
+.image1 {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.search-bar {
+  border: 3px black solid;
+  position: absolute;
+  right: 20px;
+}
+
+/* Header Ends */
+
+/* Home Screen Begins */
+
+.home-screen {
+  border: 3px lightblue solid;
+  background-color: lightblue;
+  height: 900px;
+  text-align: center;
+  position: relative;
+}
+
+.weather-station {
+  position: absolute;
+  border: 3px grey solid;
+  width: 20%;
+  height: 60%;
+  border-radius: 15px;
+  background-color: grey;
+  top: 10%;
+  left: 40%;
+}
+
+/* Home Screen Ends */
 
 /* .App {
   text-align: center;
