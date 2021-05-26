@@ -68,7 +68,7 @@
 }
 
 .weather-station {
-  position: absolute;
+  position: relative;
   border: 3px grey solid;
   width: 20%;
   height: 60%;
@@ -89,6 +89,33 @@
   top: 8%;
   left: 4%;
   border: 3px lightgray solid;
+}
+
+.primary-weather {
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  border: 3px grey solid;
+}
+
+.three-day-forecast {
+  border: 3px grey solid;
+  position: absolute;
+  top: 60%;
+  left: 35%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.weather-icon {
+  position: absolute;
+  top: 5%;
+  left: 35%;
+}
+
+.rain {
+  width: 100px;
+  height: 100px;
 }
 
 /* Home Screen Ends */
