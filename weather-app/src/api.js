@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const getManchesterWeather = () => {
   return axios
-    .get("https://goweather.herokuapp.com/weather/chorlton")
+    .get("https://goweather.herokuapp.com/weather/manchester")
     .then(({ data }) => {
       return data;
     });

@@ -21,7 +21,6 @@ function WeatherStation(props) {
 
   useEffect(() => {
     api.getManchesterWeather().then((data) => {
-      console.log(data);
       setTemp(data.temperature);
       setWind(data.wind);
       setDescription(data.description);
@@ -45,7 +44,7 @@ function WeatherStation(props) {
     });
   }, []);
 
-  const temperature = parseInt(temp.slice(1));
+  const temperature = parseInt(temp.slice(0, 2));
   var tomorrow = new Date();
   const hello = new Date(tomorrow);
   console.log(hello);
@@ -58,9 +57,11 @@ function WeatherStation(props) {
         <div className="weather-icon">{IconFunction(description)}</div>
         <div className="primary-weather">
           <div className="temp">
-            {weatherDescription(temperature, temp.slice(1, 6))}
+            {weatherDescription(temperature, temp.slice(0, 6))}
           </div>
-          <div className="wind">Wind Speed is {wind} </div>
+          <div className="wind">
+            Wind Speed is {wind} {console.log(temperature)}{" "}
+          </div>
           <div className="description"> with {description}</div>
         </div>
 

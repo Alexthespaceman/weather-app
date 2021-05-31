@@ -3,8 +3,7 @@ import * as api from "../api";
 class SideBar extends Component {
   state = { weather: [] };
 
-  getData(city) {
-    console.log(city);
+  componentDidMount(city) {
     api.getCityData(city).then((cityWeather) => {
       return this.setState({ weather: cityWeather });
     });
@@ -14,9 +13,7 @@ class SideBar extends Component {
     console.log(this.state.weather);
     return (
       <div className="sideBar">
-        <button className="button" onClick={this.getData("london")}>
-          London
-        </button>
+        <button className="button">London</button>
         <button className="button">Paris</button>
         <button className="button">Berlin</button>
         <button className="button">Barcelona</button>
