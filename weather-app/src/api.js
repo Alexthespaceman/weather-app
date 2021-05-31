@@ -8,9 +8,17 @@ export const getManchesterWeather = () => {
     });
 };
 
-export const getCityData = () => {
+export const getLondonData = () => {
   return axios
-    .get("https://goweather.herokuapp.com/weather/london")
+    .get(`https://goweather.herokuapp.com/weather/london`)
+    .then(({ data }) => {
+      return data;
+    });
+};
+
+export const getCityWeather = (city) => {
+  return axios
+    .get(`https://goweather.herokuapp.com/weather/${city}`)
     .then(({ data }) => {
       return data;
     });

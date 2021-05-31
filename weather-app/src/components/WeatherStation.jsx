@@ -9,7 +9,7 @@ function WeatherStation(props) {
   const [temp, setTemp] = useState("");
   const [wind, setWind] = useState("");
   const [description, setDescription] = useState("");
-  const [day1, setDay1] = useState("");
+  // const [day1, setDay1] = useState("");
   const [day2, setDay2] = useState("");
   const [day3, setDay3] = useState("");
   const [day1temp, setDay1temp] = useState("");
@@ -24,7 +24,7 @@ function WeatherStation(props) {
       setTemp(data.temperature);
       setWind(data.wind);
       setDescription(data.description);
-      setDay1(data.forecast[0].day);
+      // setDay1(data.forecast[0].day);
       setDay2(data.forecast[1].day);
       setDay3(data.forecast[2].day);
       setDay1temp(data.forecast[0].temperature);
@@ -45,9 +45,8 @@ function WeatherStation(props) {
   }, []);
 
   const temperature = parseInt(temp.slice(0, 2));
-  var tomorrow = new Date();
-  const hello = new Date(tomorrow);
-  console.log(hello);
+  // var tomorrow = new Date();
+  // const hello = new Date(tomorrow);
 
   return (
     <div className="weather-station">
@@ -59,9 +58,7 @@ function WeatherStation(props) {
           <div className="temp">
             {weatherDescription(temperature, temp.slice(0, 6))}
           </div>
-          <div className="wind">
-            Wind Speed is {wind} {console.log(temperature)}{" "}
-          </div>
+          <div className="wind">Wind Speed is {wind} </div>
           <div className="description"> with {description}</div>
         </div>
 

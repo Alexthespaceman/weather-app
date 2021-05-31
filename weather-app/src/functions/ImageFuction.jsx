@@ -6,7 +6,7 @@ import rain from "../images/rain.jpeg";
 import snow from "../images/snow.jpeg";
 
 function ImageFuction(description) {
-  if (description.includes("Sun") || description.includes("Sunny")) {
+  if (description.includes("Sun") || description.includes("Clear")) {
     return <img alt="sun" src={sun} className="sun-img" />;
   }
   if (description.includes("rain")) {

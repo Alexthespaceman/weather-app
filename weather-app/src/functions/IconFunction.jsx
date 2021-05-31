@@ -5,7 +5,7 @@ import { FaWind } from "react-icons/fa";
 import { FiCloudRain, FiCloudSnow } from "react-icons/fi";
 
 function IconFunction(description) {
-  if (description.includes("Sun")) {
+  if (description.includes("Sun") || description.includes("Clear")) {
     return <CgSun className="icon" />;
   }
   if (description.includes("rain")) {
