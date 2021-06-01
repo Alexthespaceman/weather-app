@@ -44,7 +44,8 @@ function WeatherStation(props) {
     });
   }, []);
 
-  const temperature = parseInt(temp.slice(0, 2));
+  const temperature = parseInt(temp.slice(0, 3));
+
   // var tomorrow = new Date();
   // const hello = new Date(tomorrow);
 
@@ -59,12 +60,12 @@ function WeatherStation(props) {
             {weatherDescription(temperature, temp.slice(0, 6))}
           </div>
           <div className="wind">Wind Speed is {wind} </div>
-          <div className="description"> with {description}</div>
+          <div className="description"> and {description}</div>
         </div>
 
         <div className="three-day-forecast">
           <div className="forecast">
-            Tomorrow's forecast {day1temp}
+            Tomorrow's forecast has highs of {day1temp} and wind speeds of
             {day1wind}
           </div>
           <div className="forecast">

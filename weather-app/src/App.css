@@ -47,7 +47,7 @@
 
 .font-loader {
   font-family: "Pattaya";
-  font-size: 4rem;
+  font-size: 5rem;
   color: lightblue;
 }
 
@@ -102,12 +102,12 @@
 }
 
 .three-day-forecast {
-  border: 3px grey solid;
+  border: 3px rgb(182, 37, 37) solid;
   position: absolute;
   top: 60%;
-  left: 35%;
+  left: 0%;
   border-radius: 10px;
-  padding: 5px;
+  padding: 10px;
 }
 
 .weather-icon {
@@ -146,7 +146,7 @@
   height: 100%;
   position: absolute;
   left: 0;
-  top: 0px;
+  top: 100px;
   display: flex;
   flex-direction: column;
 }
@@ -169,6 +169,61 @@
   font-family: "Pattaya";
   font-size: 2rem;
   color: lightblue;
+}
+
+/* @media only screen and (min-width: 1400px) {
+  .weather-station {
+    width: 20%;
+    text-align: center;
+    position: relative;
+    top: 7%;
+    left: 30%;
+  }
+  .weather-icon {
+    left: 46%;
+  }
+  .primary-weather {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+  }
+  .three-day-forecast {
+    position: absolute;
+    top: 55%;
+    left: 1%;
+  }
+  .font-loader {
+    font-size: 3em;
+  }
+} */
+
+@media only screen and (max-width: 992px) {
+  .weather-station {
+    width: 40%;
+    text-align: center;
+    position: relative;
+    top: 7%;
+    left: 30%;
+  }
+  .weather-icon {
+    left: 41%;
+  }
+  .primary-weather {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+  }
+  .three-day-forecast {
+    position: absolute;
+    top: 55%;
+    left: 1%;
+  }
+  .font-loader {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
 }
 
 /* Weather station ends */
