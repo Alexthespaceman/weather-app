@@ -185,6 +185,15 @@
 
 /* Side Bar end   */
 
+/* GLOBAL WEATHER SCREEN STARTS */
+
+.global-weather-screen {
+  height: 900px;
+  background-color: lightblue;
+}
+
+/* GLOBAL WEATHER SCREEN STARTS */
+
 /* Weather station starts */
 .font-loader-two {
   font-family: "Pattaya";
@@ -202,7 +211,6 @@
   z-index: 11;
   height: 40px;
   border-radius: 10px;
-  background-color: rgb(218, 72, 47);
   color: white;
   font-weight: lighter;
 }
