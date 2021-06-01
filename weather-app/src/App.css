@@ -98,44 +98,72 @@
   position: absolute;
   top: 40%;
   left: 4%;
-  border: 3px grey solid;
+  padding: 20px;
+  margin: 20px;
+  /* border: 3px grey solid; */
 }
 
 .three-day-forecast {
-  border: 3px rgb(182, 37, 37) solid;
+  /* border: 3px rgb(182, 37, 37) solid; */
   position: absolute;
-  top: 60%;
+  top: 75%;
   left: 0%;
   border-radius: 10px;
-  padding: 10px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .weather-icon {
   position: absolute;
   top: 5%;
-  left: 35%;
+  left: 32%;
 }
 
 .icon {
-  width: 100px;
-  height: 100px;
-  color: whitesmoke;
+  width: 130px;
+  height: 130px;
+  /* color: yellow; */
+}
+
+#sun {
+  color: yellow;
+}
+
+#rain {
+  color: grey;
+}
+#snow {
+  color: white;
+}
+#cloud {
+  color: white;
+}
+#wind {
+  color: grey;
 }
 
 .temp {
   color: white;
+  font-family: "Pattaya";
+  font-size: 1.2em;
 }
 
 .wind {
   color: whitesmoke;
+  font-family: "Pattaya";
+  font-size: 1.2em;
 }
 
 .description {
   color: whitesmoke;
+  font-family: "Pattaya";
+  font-size: 1.2em;
 }
 
 .forecast {
   color: white;
+  padding: 10px;
+  font-family: "Pattaya";
 }
 
 /* Side Bar start   */
@@ -157,19 +185,29 @@
 
 /* Side Bar end   */
 
-/* .rian-img {
-  height: 50%;
-  width: 50%;
-  object-fit: cover;
-} */
-/* Home Screen Ends */
-
 /* Weather station starts */
 .font-loader-two {
   font-family: "Pattaya";
   font-size: 2rem;
   color: lightblue;
+  padding: -10px;
 }
+
+/* GLOBAL-WEATHER BUTTON STARTS */
+
+.global-weather {
+  position: absolute;
+  left: 43%;
+  top: 80%;
+  z-index: 11;
+  height: 40px;
+  border-radius: 10px;
+  background-color: rgb(218, 72, 47);
+  color: white;
+  font-weight: lighter;
+}
+
+/* GLOBAL-WEATHER BUTTON ENDS */
 
 /* @media only screen and (min-width: 1400px) {
   .weather-station {
@@ -224,6 +262,46 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .weather-station {
+    width: 90%;
+    text-align: center;
+    position: relative;
+    top: 7%;
+    padding: 10px;
+    left: 2%;
+  }
+  .search-bar {
+    position: relative;
+    top: 110%;
+    left: 0%;
+    z-index: 10;
+    padding: 10px;
+  }
+  .weather-icon {
+    left: 37%;
+  }
+  .primary-weather {
+    position: absolute;
+    top: 30%;
+    left: 0%;
+    padding: 10px;
+    margin: 10px;
+  }
+  .font-loader {
+    font-size: 2.2em;
+    position: absolute;
+    right: -10px;
+    top: 5px;
+  }
+  .global-weather {
+    position: absolute;
+    top: 75%;
+    z-index: 11;
+    left: 12%;
+  }
+  .logo {
+    display: none;
+  }
 }
 
 /* Weather station ends */

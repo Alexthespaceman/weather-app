@@ -10,8 +10,8 @@ function WeatherStation(props) {
   const [wind, setWind] = useState("");
   const [description, setDescription] = useState("");
   // const [day1, setDay1] = useState("");
-  const [day2, setDay2] = useState("");
-  const [day3, setDay3] = useState("");
+  // const [day2, setDay2] = useState("");
+  // const [day3, setDay3] = useState("");
   const [day1temp, setDay1temp] = useState("");
   const [day2temp, setDay2temp] = useState("");
   const [day3temp, setDay3temp] = useState("");
@@ -25,8 +25,8 @@ function WeatherStation(props) {
       setWind(data.wind);
       setDescription(data.description);
       // setDay1(data.forecast[0].day);
-      setDay2(data.forecast[1].day);
-      setDay3(data.forecast[2].day);
+      // setDay2(data.forecast[1].day);
+      // setDay3(data.forecast[2].day);
       setDay1temp(data.forecast[0].temperature);
       setDay2temp(data.forecast[1].temperature);
       setDay3temp(data.forecast[2].temperature);
@@ -46,8 +46,10 @@ function WeatherStation(props) {
 
   const temperature = parseInt(temp.slice(0, 3));
 
-  // var tomorrow = new Date();
-  // const hello = new Date(tomorrow);
+  const today = new Date();
+  const tomorrow = new Date(today);
+  const tomorrowsDate = new Date(tomorrow.setDate(tomorrow.getDate() + 1));
+  console.log(tomorrowsDate);
 
   return (
     <div className="weather-station">
@@ -57,7 +59,7 @@ function WeatherStation(props) {
         <div className="weather-icon">{IconFunction(description)}</div>
         <div className="primary-weather">
           <div className="temp">
-            {weatherDescription(temperature, temp.slice(0, 6))}
+            {weatherDescription(temperature, temp.slice(1, 6))}
           </div>
           <div className="wind">Wind Speed is {wind} </div>
           <div className="description"> and {description}</div>
@@ -68,8 +70,8 @@ function WeatherStation(props) {
             Tomorrow's forecast has highs of {day1temp} and wind speeds of
             {day1wind}
           </div>
-          <div className="forecast">
-            {day2}
+          {/* <div className="forecast">
+            {tomorrowsDate.day}
             {day2temp}
             {day2wind}
           </div>
@@ -77,7 +79,7 @@ function WeatherStation(props) {
             {day3}
             {day3temp}
             {day3wind}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

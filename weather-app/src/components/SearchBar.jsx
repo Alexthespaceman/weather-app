@@ -6,7 +6,7 @@ class SearchBar extends Component {
       <div className="search-bar">
         <form>
           <label>
-            Search all Weather :
+            Search all Weather
             <input className="text-box" type="text" name="name" />
           </label>
           <input className="text-box" type="submit" value="Submit" />

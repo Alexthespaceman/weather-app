@@ -6,10 +6,12 @@ class HomeScreen extends Component {
   render() {
     return (
       <div className="home-screen">
-        <Link to="/londonScreen">
-          <button>Check out weather from around the globe?</button>
-        </Link>
         <WeatherStation />
+        <Link to="/londonScreen">
+          <button className="global-weather">
+            Check out weather from around the globe?
+          </button>
+        </Link>
       </div>
     );
   }
