@@ -1,30 +1,36 @@
 import React, { Component } from "react";
-import * as api from "../api";
 class SideBar extends Component {
-  state = { weather: [] };
+  // state = { weather: [] };
 
-  componentDidMount(city) {
-    api.getLondonData(city).then((cityWeather) => {
-      return this.setState({ weather: cityWeather });
-    });
-  }
+  // componentDidMount(city) {
+  //   api.getLondonData(city).then((cityWeather) => {
+  //     return this.setState({ weather: cityWeather });
+  //   });
+  // }
 
-  getCityData = (event) => {
-    const city = event.target.value;
-    api.getCityWeather(city).then((weather) => {
-      console.log(weather);
-      this.setState({ weather: weather });
-    });
-  };
+  // getCityData = (event) => {
+  //   const city = event.target.value;
+  //   api.getCityWeather(city).then((weather) => {
+  //     console.log(weather);
+  //     this.setState({ weather: weather });
+  //   });
+  // };
 
   render() {
-    console.log(this.state.weather);
     return (
       <div className="sideBar">
-        <button className="button" value="london" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="london"
+          onClick={this.props.getCityData("london")}
+        >
           London
         </button>
-        <button className="button" value="paris" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="paris"
+          oonClick={this.props.getCityData("paris")}
+        >
           Paris
         </button>
         <button className="button" value="rome" onClick={this.getCityData}>
