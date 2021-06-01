@@ -17,51 +17,85 @@ class SideBar extends Component {
   // };
 
   render() {
+    const { getCityData } = this.props;
+
     return (
       <div className="sideBar">
         <button
           className="button"
           value="london"
-          onClick={this.props.getCityData("london")}
+          onClick={() => getCityData("london")}
         >
           London
         </button>
         <button
           className="button"
           value="paris"
-          oonClick={this.props.getCityData("paris")}
+          onClick={() => getCityData("paris")}
         >
           Paris
         </button>
-        <button className="button" value="rome" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="rome"
+          onClick={() => getCityData("rome")}
+        >
           Rome
         </button>
-        <button className="button" value="barcelona" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="barcelona"
+          onClick={() => getCityData("barcelona")}
+        >
           Barcelona
         </button>
-        <button className="button" value="tokyo" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="tokyo"
+          onClick={() => getCityData("tokyo")}
+        >
           Tokyo
         </button>
-        <button className="button" value="newyork" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="newyork"
+          onClick={() => getCityData("newyork")}
+        >
           New York
         </button>
-        <button className="button" value="singapore" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="singapore"
+          onClick={() => getCityData("singapore")}
+        >
           Singapore
         </button>
-        <button className="button" value="melborne" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="melborne"
+          onClick={() => getCityData("melborne")}
+        >
           Melbourne
         </button>
         <button
           className="button"
           value="losangeles"
-          onClick={this.getCityData}
+          onClick={() => getCityData("losangeles")}
         >
           Los Angeles
         </button>
-        <button className="button" value="dubai" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="dubai"
+          onClick={() => getCityData("dubai")}
+        >
           Dubai
         </button>
-        <button className="button" value="soul" onClick={this.getCityData}>
+        <button
+          className="button"
+          value="soul"
+          onClick={() => getCityData("soul")}
+        >
           Soul
         </button>
       </div>

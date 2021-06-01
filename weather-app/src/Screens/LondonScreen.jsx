@@ -11,20 +11,14 @@ class LondonScreen extends Component {
     });
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevState.weather !== this.state.weather) {
-  //     console.log("weather state has changed.");
-  //   }
-  // }
-
   getCityData = (city) => {
     api.getCityWeather(city).then((weather) => {
-      this.setState({ weather: weather });
+      return this.setState({ weather: weather });
     });
   };
 
   render() {
-    console.log("hello");
+    console.log(this.state.weather);
     return (
       <div>
         <SideBar getCityData={this.getCityData} />
