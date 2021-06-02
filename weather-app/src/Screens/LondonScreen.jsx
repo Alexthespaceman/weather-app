@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as api from "../api";
+import SearchBar from "../components/SearchBar";
 import SideBar from "../components/SideBar";
 import IconFunction from "../functions/IconFunction";
 import ImageFuction from "../functions/ImageFuction";
@@ -7,7 +8,7 @@ import weatherDescription from "../functions/tempFunction";
 
 class LondonScreen extends Component {
   state = {
-    city: ["London"],
+    city: "London",
     weather: [],
     isLoading: true,
   };
@@ -24,7 +25,12 @@ class LondonScreen extends Component {
     });
   };
 
+  insertState = (weather, city) => {
+    return this.setState({ weather: weather, city: city });
+  };
+
   render() {
+    console.log(this.state);
     const { temperature, wind, description } = this.state.weather;
     const { isLoading, city } = this.state;
 
@@ -41,6 +47,7 @@ class LondonScreen extends Component {
     const temp = parseInt(temperature.slice(0, 3));
     return (
       <div className="global-weather-screen">
+        <SearchBar insertState={this.insertState} />
         <div className="weather-station">
           <div className="font-loader-two">{`The weather in ${city}`} </div>
           <div className="station">

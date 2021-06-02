@@ -14,17 +14,16 @@ class SearchBar extends Component {
     submitEvent.preventDefault();
     api.getCityWeather(searchCity).then((weather) => {
       this.setState({ searchCity: "", weather: weather });
+      this.props.insertState(weather, searchCity);
     });
   };
 
   render() {
-    console.log(this.state.weather);
-
     return (
       <div className="search-bar">
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Search all Weather
+        <form className="search-bar" onSubmit={this.handleSubmit}>
+          <label className="text-box">
+            Search a city
             <input
               onChange={this.handleChange}
               className="text-box"

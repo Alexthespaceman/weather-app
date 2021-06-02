@@ -65,12 +65,12 @@ function WeatherStation(props) {
           <div className="description"> and {description}</div>
         </div>
 
-        <div className="three-day-forecast">
+        {/* <div className="three-day-forecast">
           <div className="forecast">
             Tomorrow's forecast has highs of {day1temp} and wind speeds of
             {day1wind}
-          </div>
-          {/* <div className="forecast">
+          </div> */}
+        {/* <div className="forecast">
             {tomorrowsDate.day}
             {day2temp}
             {day2wind}
@@ -80,8 +80,8 @@ function WeatherStation(props) {
             {day3temp}
             {day3wind}
           </div> */}
-        </div>
       </div>
+      {/* </div> */}
     </div>
   );
 }

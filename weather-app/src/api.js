@@ -20,7 +20,6 @@ export const getCityWeather = (city) => {
   return axios
     .get(`https://goweather.herokuapp.com/weather/${city}`)
     .then(({ data }) => {
-      console.log(data);
       return data;
     });
 };

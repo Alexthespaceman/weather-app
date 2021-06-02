@@ -1,7 +1,7 @@
 import { Link } from "@reach/router";
 import { React, useEffect } from "react";
 import WebFont from "webfontloader";
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 import Logo from "./Logo";
 
 function Header(props) {
@@ -18,7 +18,7 @@ function Header(props) {
       <Link to="/">
         <Logo />
       </Link>
-      <SearchBar />
+      {/* <SearchBar /> */}
       <div className="font-loader">Welcome to the weather station!</div>
     </div>
   );
