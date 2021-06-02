@@ -7,55 +7,71 @@ import weatherDescription from "../functions/tempFunction";
 
 class LondonScreen extends Component {
   state = {
-    weather: [{ description: "Sun", temperature: "21", wind: "23 k/h" }],
+    weather: [],
+    isLoading: true,
   };
 
-  componentDidMount(city) {
-    api.getLondonData(city).then((cityWeather) => {
-      return this.setState({ weather: cityWeather });
+  componentDidMount() {
+    api.getLondonData().then((cityWeather) => {
+      return this.setState({ weather: cityWeather, isLoading: false });
     });
   }
 
   getCityData = (city) => {
+    console.log(city);
     api.getCityWeather(city).then((weather) => {
-      console.log(weather);
       return this.setState({ weather: weather });
     });
   };
 
   render() {
+    const { temperature, wind, description } = this.state.weather;
+    const { isLoading } = this.state;
+    if (isLoading) {
+      return <div>Loading...</div>;
+    }
+    const temp1 = this.state.weather.forecast[0].temperature;
+    const wind1 = this.state.weather.forecast[0].wind;
+    const temp2 = this.state.weather.forecast[1].temperature;
+    const wind2 = this.state.weather.forecast[1].wind;
+    const temp3 = this.state.weather.forecast[2].temperature;
+    const wind3 = this.state.weather.forecast[2].wind;
+
+    console.log(this.state.weather);
+
+    const temp = parseInt(temperature.slice(0, 3));
     return (
       <div className="global-weather-screen">
         <div className="weather-station">
           <div className="font-loader-two">local weather in </div>
           <div className="station">
-            {ImageFuction("rain")}
-            <div className="weather-icon">{IconFunction("rain")}</div>
+            {ImageFuction(description)}
+            <div className="weather-icon">{IconFunction(description)}</div>
             <div className="primary-weather">
-              <div className="temp">{weatherDescription(24, 24)}</div>
-              <div className="wind">Wind Speed is {this.state.wind} </div>
-              <div className="description"> and {this.state.description}</div>
+              <div className="temp">
+                {weatherDescription(temp, temperature.slice(0, 6))}
+              </div>
+              <div className="wind">Wind Speed is {wind} </div>
+              <div className="description"> and {description}</div>
             </div>
 
             <div className="three-day-forecast">
               <div className="forecast">
-                Tomorrow's forecast has highs of {this.state.temperature} and
-                wind speeds of
-                {this.state.wind}
-              </div>
-              {/* <div className="forecast">
-                {tomorrowsDate.day}
-                {day2temp}
-                {day2wind}
+                Tomorrow's forecast has highs of {temp1} and wind speeds of
+                {wind1}
               </div>
               <div className="forecast">
-                {day3}
-                {day3temp}
-                {day3wind}
-              </div> */}
+                {temp2}
+                {wind2}
+              </div>
+              <div className="forecast">
+                {temp3}
+                {wind3}
+              </div>
             </div>
           </div>
         </div>
+        )
         <SideBar getCityData={this.getCityData} />
       </div>
     );
