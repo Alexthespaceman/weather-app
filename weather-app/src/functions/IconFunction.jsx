@@ -17,7 +17,7 @@ function IconFunction(description) {
   if (description.includes("cloud")) {
     return <BiCloud className="icon" id="cloud" />;
   }
-  if (description.includes("wind")) {
+  if (description.includes("wind") || description.includes("Thunder")) {
     return <FaWind className="icon" id="wind" />;
   }
 }

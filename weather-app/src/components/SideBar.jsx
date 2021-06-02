@@ -1,21 +1,5 @@
 import React, { Component } from "react";
 class SideBar extends Component {
-  // state = { weather: [] };
-
-  // componentDidMount(city) {
-  //   api.getLondonData(city).then((cityWeather) => {
-  //     return this.setState({ weather: cityWeather });
-  //   });
-  // }
-
-  // getCityData = (event) => {
-  //   const city = event.target.value;
-  //   api.getCityWeather(city).then((weather) => {
-  //     console.log(weather);
-  //     this.setState({ weather: weather });
-  //   });
-  // };
-
   render() {
     const { getCityData } = this.props;
 
@@ -72,17 +56,17 @@ class SideBar extends Component {
         </button>
         <button
           className="button"
-          value="melborne"
-          onClick={() => getCityData("melborne")}
+          value="Sydney"
+          onClick={() => getCityData("sydney")}
         >
-          Melbourne
+          Sydney
         </button>
         <button
           className="button"
-          value="losangeles"
-          onClick={() => getCityData("losangeles")}
+          value="portland"
+          onClick={() => getCityData("portland")}
         >
-          Los Angeles
+          portland
         </button>
         <button
           className="button"
@@ -93,10 +77,10 @@ class SideBar extends Component {
         </button>
         <button
           className="button"
-          value="soul"
-          onClick={() => getCityData("soul")}
+          value="Seoul"
+          onClick={() => getCityData("seoul")}
         >
-          Soul
+          Seoul
         </button>
       </div>
     );

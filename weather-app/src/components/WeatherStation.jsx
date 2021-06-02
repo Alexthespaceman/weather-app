@@ -59,7 +59,7 @@ function WeatherStation(props) {
         <div className="weather-icon">{IconFunction(description)}</div>
         <div className="primary-weather">
           <div className="temp">
-            {weatherDescription(temperature, temp.slice(1, 6))}
+            {weatherDescription(temperature, temp.slice(0, 6))}
           </div>
           <div className="wind">Wind Speed is {wind} </div>
           <div className="description"> and {description}</div>

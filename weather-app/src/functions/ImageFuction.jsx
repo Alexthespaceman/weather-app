@@ -18,7 +18,7 @@ function ImageFuction(description) {
   if (description.includes("cloud")) {
     return <img alt="cloud" src={cloudy} className="cloud-img" />;
   }
-  if (description.includes("wind")) {
+  if (description.includes("wind") || description.includes("Thunder")) {
     return <img alt="lighting" src={lightning} className="wind-img" />;
   }
 }

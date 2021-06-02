@@ -90,8 +90,18 @@
   left: 4%;
   border: 3px lightgray solid;
   overflow: hidden;
-  background-size: cover;
   background-position: center;
+  object-fit: cover;
+}
+
+.cloud-img {
+  height: 480px;
+  width: 400px;
+}
+
+.wind-img {
+  height: 480px;
+  width: 400px;
 }
 
 .primary-weather {
@@ -116,13 +126,12 @@
 .weather-icon {
   position: absolute;
   top: 5%;
-  left: 32%;
+  left: 19%;
 }
 
 .icon {
-  width: 130px;
-  height: 130px;
-  /* color: yellow; */
+  width: 170px;
+  height: 170px;
 }
 
 #sun {
@@ -146,30 +155,34 @@
   color: white;
   font-family: "Pattaya";
   font-size: 1.2em;
+  text-align: center;
 }
 
 .wind {
   color: whitesmoke;
   font-family: "Pattaya";
   font-size: 1.2em;
+  text-align: center;
 }
 
 .description {
   color: whitesmoke;
   font-family: "Pattaya";
   font-size: 1.2em;
+  text-align: center;
 }
 
 .forecast {
   color: white;
   padding: 10px;
   font-family: "Pattaya";
+  text-align: center;
+  margin: -10px;
 }
 
 /* Side Bar start   */
 
 .sideBar {
-  border: 3px red solid;
   width: 150px;
   height: 100%;
   position: absolute;
@@ -181,6 +194,17 @@
 
 .button {
   flex: 1;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+  background-color: rgb(149, 229, 255);
+  color: rgb(104, 104, 104);
+  font-size: larger;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: yellow;
 }
 
 /* Side Bar end   */
@@ -206,13 +230,19 @@
 
 .global-weather {
   position: absolute;
-  left: 43%;
-  top: 80%;
+  left: 41%;
+  top: 73%;
   z-index: 11;
   height: 40px;
   border-radius: 10px;
   color: white;
   font-weight: lighter;
+  background-color: lightcoral;
+}
+
+.font-loader-two {
+  font-size: 1.5em;
+  text-align: center;
 }
 
 /* GLOBAL-WEATHER BUTTON ENDS */
@@ -252,7 +282,7 @@
     left: 30%;
   }
   .weather-icon {
-    left: 41%;
+    left: 39%;
   }
   .primary-weather {
     position: absolute;
@@ -267,6 +297,15 @@
   .font-loader {
     font-size: 3em;
   }
+
+  .temp {
+    text-align: center;
+  }
+  /* .search-bar {
+    position: absolute;
+    font-size: x-small;
+    padding: 10px;
+  } */
 }
 
 @media only screen and (max-width: 600px) {
@@ -286,8 +325,9 @@
     padding: 10px;
   }
   .weather-icon {
-    left: 37%;
+    left: 33%;
   }
+
   .primary-weather {
     position: absolute;
     top: 30%;

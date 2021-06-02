@@ -7,6 +7,7 @@ import weatherDescription from "../functions/tempFunction";
 
 class LondonScreen extends Component {
   state = {
+    city: ["London"],
     weather: [],
     isLoading: true,
   };
@@ -18,15 +19,15 @@ class LondonScreen extends Component {
   }
 
   getCityData = (city) => {
-    console.log(city);
     api.getCityWeather(city).then((weather) => {
-      return this.setState({ weather: weather });
+      return this.setState({ weather: weather, city: city });
     });
   };
 
   render() {
     const { temperature, wind, description } = this.state.weather;
-    const { isLoading } = this.state;
+    const { isLoading, city } = this.state;
+
     if (isLoading) {
       return <div>Loading...</div>;
     }
@@ -37,18 +38,16 @@ class LondonScreen extends Component {
     const temp3 = this.state.weather.forecast[2].temperature;
     const wind3 = this.state.weather.forecast[2].wind;
 
-    console.log(this.state.weather);
-
     const temp = parseInt(temperature.slice(0, 3));
     return (
       <div className="global-weather-screen">
         <div className="weather-station">
-          <div className="font-loader-two">local weather in </div>
+          <div className="font-loader-two">{`The weather in ${city}`} </div>
           <div className="station">
             {ImageFuction(description)}
             <div className="weather-icon">{IconFunction(description)}</div>
             <div className="primary-weather">
-              <div className="temp">
+              <div className="temp1">
                 {weatherDescription(temp, temperature.slice(0, 6))}
               </div>
               <div className="wind">Wind Speed is {wind} </div>
