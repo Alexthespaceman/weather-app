@@ -343,6 +343,28 @@
   }
 }
 
+@media (min-width: 1300px) {
+  .weather-icon {
+    left: 19%;
+  }
+
+  .global-weather {
+    left: 41%;
+    top: 69%;
+  }
+
+  .weather-station {
+    top: 5%;
+    height: 560px;
+  }
+  .three-day-forecast1 {
+    top: 78%;
+  }
+  .three-day-forecast {
+    top: 73%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .weather-station {
     width: 90%;
