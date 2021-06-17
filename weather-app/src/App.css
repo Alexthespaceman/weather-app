@@ -366,6 +366,9 @@
   .font-loader-two {
     font-size: large;
   }
+  .loader {
+    left: 30%;
+  }
 }
 
 @media only screen and (max-width: 600px) {
