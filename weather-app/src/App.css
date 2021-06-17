@@ -363,6 +363,9 @@
   .three-day-forecast {
     top: 73%;
   }
+  .font-loader-two {
+    font-size: large;
+  }
 }
 
 @media only screen and (max-width: 600px) {
