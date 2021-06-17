@@ -59,7 +59,8 @@
 }
 
 .text-box {
-  border-radius: 10px;
+  border-radius: 5px;
+  padding: 3px;
 }
 
 /* Header Ends */
@@ -102,12 +103,12 @@
 }
 
 .cloud-img {
-  height: 480px;
+  height: 550px;
   width: 400px;
 }
 
 .wind-img {
-  height: 480px;
+  height: 550px;
   width: 400px;
 }
 
@@ -123,8 +124,18 @@
 .three-day-forecast {
   /* border: 3px rgb(182, 37, 37) solid; */
   position: absolute;
-  top: 75%;
-  left: 0%;
+  top: 65%;
+  left: 5%;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.three-day-forecast1 {
+  /* border: 3px rgb(182, 37, 37) solid; */
+  position: absolute;
+  top: 70%;
+  left: 5%;
   border-radius: 10px;
   padding: 20px;
   margin: 20px;
@@ -219,19 +230,24 @@
 /* GLOBAL WEATHER SCREEN STARTS */
 
 .global-weather-screen {
-  height: 900px;
+  height: 980px;
   background-color: lightblue;
 }
 
-/* GLOBAL WEATHER SCREEN STARTS */
+.loader {
+  position: relative;
+  left: 35%;
+  padding: 30px;
+}
 
-/* Weather station starts */
 .font-loader-two {
   font-family: "Pattaya";
   font-size: 2rem;
   color: lightblue;
-  padding: -10px;
+  padding: 8px;
 }
+
+/* GLOBAL WEATHER SCREEN STOPS */
 
 /* GLOBAL-WEATHER BUTTON STARTS */
 
@@ -315,6 +331,18 @@
   } */
 }
 
+/* SCREEN SIZE FOR 27INCH MONITOR*/
+
+@media (max-width: 2187px) {
+  .weather-icon {
+    left: 26%;
+  }
+
+  .global-weather {
+    left: 43.5%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .weather-station {
     width: 90%;
@@ -332,7 +360,7 @@
     padding: 5px;
   }
   .weather-icon {
-    left: 27%;
+    left: 24%;
   }
 
   .primary-weather {
@@ -344,13 +372,13 @@
   }
 
   .cloud-img {
-    height: 500px;
+    height: 550px;
     width: 400px;
   }
 
-  .forecast {
+  /* .forecast {
     display: none;
-  }
+  } */
   .font-loader {
     font-size: 2.2em;
     position: absolute;

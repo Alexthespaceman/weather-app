@@ -8,7 +8,7 @@ function IconFunction(description) {
   if (description.includes("Sun") || description.includes("Clear")) {
     return <CgSun className="icon" id="sun" />;
   }
-  if (description.includes("rain")) {
+  if (description.includes("rain") || description.includes("shower")) {
     return <FiCloudRain className="icon" id="rain" />;
   }
   if (description.includes("Snow")) {

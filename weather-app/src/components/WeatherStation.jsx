@@ -53,7 +53,7 @@ function WeatherStation(props) {
 
   return (
     <div className="weather-station">
-      <div className="font-loader-two">Your local weather</div>
+      <div className="font-loader-two">The local weather in Manchester</div>
       <div className="station">
         {ImageFuction(description)}
         <div className="weather-icon">{IconFunction(description)}</div>
@@ -65,12 +65,15 @@ function WeatherStation(props) {
           <div className="description"> and {description}</div>
         </div>
 
-        {/* <div className="three-day-forecast">
+        <div className="three-day-forecast1">
           <div className="forecast">
             Tomorrow's forecast has highs of {day1temp} and wind speeds of
             {day1wind}
-          </div> */}
-        {/* <div className="forecast">
+          </div>
+        </div>
+
+        {/* <div>
+         <div className="forecast">
             {tomorrowsDate.day}
             {day2temp}
             {day2wind}
@@ -79,7 +82,7 @@ function WeatherStation(props) {
             {day3}
             {day3temp}
             {day3wind}
-          </div> */}
+          </div>  */}
       </div>
       {/* </div> */}
     </div>

@@ -35,7 +35,13 @@ class LondonScreen extends Component {
     const { isLoading, city } = this.state;
 
     if (isLoading) {
-      return <div>Loading...</div>;
+      return (
+        <div className="loader">
+          {" "}
+          Sorry, The Weather Station server is down at the moment, please try
+          again soon.{" "}
+        </div>
+      );
     }
     const temp1 = this.state.weather.forecast[0].temperature;
     const wind1 = this.state.weather.forecast[0].wind;
@@ -66,14 +72,14 @@ class LondonScreen extends Component {
                 Tomorrow's forecast has highs of {temp1} and wind speeds of
                 {wind1}
               </div>
-              <div className="forecast">
+              {/* <div className="forecast">
                 {temp2}
                 {wind2}
               </div>
               <div className="forecast">
                 {temp3}
                 {wind3}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
