@@ -28,7 +28,7 @@ function weatherDescription(temperature, temp) {
   }
   if (temperature < 0) {
     return (
-      <div classNam="temp">
+      <div className="temp">
         The Temperature today is a an incredibly cold -{temp}
       </div>
     );

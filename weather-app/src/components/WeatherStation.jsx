@@ -21,6 +21,7 @@ function WeatherStation(props) {
 
   useEffect(() => {
     api.getManchesterWeather().then((data) => {
+      console.log(data);
       setTemp(data.temperature);
       setWind(data.wind);
       setDescription(data.description);

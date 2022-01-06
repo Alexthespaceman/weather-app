@@ -9,7 +9,12 @@ function ImageFuction(description) {
   if (description.includes("Sun") || description.includes("Clear")) {
     return <img alt="sun" src={sun} className="sun-img" />;
   }
-  if (description.includes("rain") || description.includes("shower")) {
+  if (
+    description.includes("rain") ||
+    description.includes("Rain") ||
+    description.includes("shower") ||
+    description.includes("drizzle")
+  ) {
     return <img alt="rain" src={rain} className="rain-img" />;
   }
   if (description.includes("snow")) {

@@ -12,7 +12,7 @@ export const getManchesterWeather = () => {
 
 export const getLondonData = () => {
   return axios
-    .get(`https://goweather.herokuapp.com/weather/manchester`)
+    .get(`https://goweather.herokuapp.com/weather/london`)
     .then(({ data }) => {
       return data;
     });
