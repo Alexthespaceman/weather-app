@@ -31,7 +31,7 @@ class SearchBar extends Component {
               name="name"
             />
           </label>
-          <input className="text-box" type="submit" value="Submit" />
+          <input className="text-box" type="submit" value="Search" />
         </form>
       </div>
     );
