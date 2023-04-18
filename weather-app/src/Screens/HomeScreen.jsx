@@ -1,4 +1,4 @@
-import { Link } from "@reach/router";
+// import { Link } from "@reach/router";
 import React, { Component } from "react";
 import WeatherStation from "../components/WeatherStation";
 
@@ -7,11 +7,6 @@ class HomeScreen extends Component {
     return (
       <div className="home-screen">
         <WeatherStation />
-        <Link to="/londonScreen">
-          <button className="global-weather">
-            Check out weather from around the globe?
-          </button>
-        </Link>
       </div>
     );
   }
