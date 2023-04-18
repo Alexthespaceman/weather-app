@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "@reach/router";
+
 import WebFont from "webfontloader";
 import * as api from "../api";
 import IconFunction from "../functions/IconFunction";
@@ -18,7 +20,6 @@ function WeatherStation(props) {
 
   useEffect(() => {
     api.getManchesterWeather().then((data) => {
-      console.log(data);
       setTemp(data.temperature);
       setWind(data.wind);
       setDescription(data.description);
@@ -53,7 +54,7 @@ function WeatherStation(props) {
         <div className="weather-icon">{IconFunction(description)}</div>
         <div className="primary-weather">
           <div className="temp">
-            {weatherDescription(temperature, temp.slice(0, 6))}
+            {weatherDescription(temperature, temp.slice(1, 6))}
           </div>
           <div className="wind">Wind Speed is {wind} </div>
           <div className="description"> and {description}</div>
@@ -61,8 +62,7 @@ function WeatherStation(props) {
 
         <div className="three-day-forecast1">
           <div className="forecast">
-            Tomorrow's forecast has highs of {day1temp} and wind speeds of
-            {day1wind}
+            Tomorrow's forecast has highs of {day1temp} and wind speeds of {day1wind}
           </div>
         </div>
 
@@ -79,6 +79,11 @@ function WeatherStation(props) {
           </div>  */}
       </div>
       {/* </div> */}
+      <Link to="/global-screen">
+          <button className="global-weather">
+            Check out weather from around the globe?
+          </button>
+        </Link>
     </div>
   );
 }
