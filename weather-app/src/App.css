@@ -306,7 +306,19 @@
     text-align: center;
   }
   .search-bar {
-    display: none;
+    position: absolute;
+    left: 5%;
+    top: 56px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+  }
+
+  .search-button {
+    border-radius: 5px;
+    padding: 5px;
+    border-style: none;
+    height: 26px;
   }
   
   .primary-weather {
@@ -317,15 +329,20 @@
     margin: 10px;
   }
 
+  .text-box {
+    width: 120px;
+    margin-left: 10px;
+  }
+
   .cloud-img {
     height: 550px;
   }
 
   .font-loader {
-    font-size: 2.2em;
+    font-size: 1.3em;
     position: absolute;
-    right: -10px;
-    top: 5px;
+    right: 13px;
+    top: 27px;
   }
   .global-weather {
     top: 75%;
@@ -333,9 +350,15 @@
     left: 12%;
   }
   .logo {
-    display: none;
+    left: 8px;
   }
   .sideBar {
     display: none;
   }
+}
+
+@media only screen and (max-width: 375px) {
+ .text-box {
+    margin-left: 0px;
+ }
 }

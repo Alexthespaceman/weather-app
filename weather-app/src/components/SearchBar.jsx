@@ -23,7 +23,7 @@ class SearchBar extends Component {
       <div className="search-bar">
         <form className="search-bar" onSubmit={this.handleSubmit}>
           <label className="text-box">
-            Search for a city
+            Search for a city: 
             <input
               onChange={this.handleChange}
               className="text-box"
@@ -31,7 +31,7 @@ class SearchBar extends Component {
               name="name"
             />
           </label>
-          <input className="text-box" type="submit" value="Search" />
+          <input className="search-button" type="submit" value="Search" />
         </form>
       </div>
     );
